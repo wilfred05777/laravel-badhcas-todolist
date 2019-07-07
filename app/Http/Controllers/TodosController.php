@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Todo;
+use Session;
 
 class TodosController extends Controller
 {
@@ -26,6 +27,7 @@ class TodosController extends Controller
        $todo->todo = $request->todo;
        $todo->save();
 
+       Session::flash('success', 'Your Todo is Created');
        return redirect()->back();
     }
 
