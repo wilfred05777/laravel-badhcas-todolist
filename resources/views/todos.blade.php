@@ -23,10 +23,15 @@
                     <a href="{{ route('todos.completed', ['id' => $todo->id]) }}" class="btn btn-xs btn-success">Mark As Completed</a>
 
                     @else
+
                     <span class="text-sucess" class="btn btn-info">Completed</span>
                 @endif
 
             <hr>
     @endforeach
     </h3>
+    <div class="pagination-lg">
+
+    {!! $todos->links() !!}
+    </div>
 @endsection

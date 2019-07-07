@@ -5,8 +5,12 @@
         <div class="col-lg-12 col-lg-offset-3">
             <form action="{{ route('todos.save', ['id' => $todo->id]) }}" method="post">
                 {{ csrf_field() }}
-                <input name="todo" type="text" class="form-control input-group-lg" value="{{ $todo->todo }}" placeholder="Create New Input">
-
+                <input name="todo"
+                       type="text"
+                       class="form-control input-group-lg"
+                       value="{{ $todo->todo }}"
+                       placeholder="Create New Input"
+                >
             </form>
         </div>
     </div>

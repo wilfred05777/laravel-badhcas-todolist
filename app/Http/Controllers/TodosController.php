@@ -10,7 +10,7 @@ class TodosController extends Controller
     //
     public function index()
     {
-        $todos = Todo::all();
+        $todos = Todo::latest()->paginate(5);
 
         return view('todos')->with('todos', $todos);
     }
